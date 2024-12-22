@@ -1,0 +1,9 @@
+{
+    "fields": [
+        {"name": "Nombres", "type": "text", "required": true},
+        {"name": "Apellidos", "type": "text", "required": true},
+        {"name": "Direccion", "type": "textarea", "required": false},
+        {"name": "Genero", "type": "select", "options": ["Masculino", "Femenino"], "required": true},
+        {"name": "Departamentos", "type": "select", "optionsApi": "my-json-server.typicode.com/joseolivares/elsalvador_states/deptos", "required": true}
+    ]
+}
