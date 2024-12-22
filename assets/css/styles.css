@@ -12,23 +12,20 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
 }
 
-/* Título del formulario */
+/* Estilo para el formulario */
 form h2 {
     font-size: 24px;
     margin-bottom: 20px;
     color: #333;
 }
 
-/* Estilo para etiquetas */
 .form-label {
     font-weight: bold;
     color: #495057;
 }
 
-/* Campos de entrada */
 input[type="text"],
 textarea,
 select {
@@ -40,7 +37,6 @@ select {
     font-size: 14px;
 }
 
-/* Botón de registrar */
 button[type="submit"] {
     background-color: #007bff;
     color: white;
@@ -56,47 +52,38 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* Tabla responsiva */
+/* Estilo para la tabla */
 .table-responsive {
-    overflow-x: auto; /* Habilita el desplazamiento horizontal */
-    -webkit-overflow-scrolling: touch; /* Suaviza el desplazamiento en móviles */
     margin-top: 20px;
-    margin-bottom: 20px; /* Añade espacio debajo de la tabla */
 }
 
 table {
-    width: 100%;
     border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
 }
 
-th, td {
-    text-align: left;
+table th {
+    background-color: #007bff !important; /* Fondo azul */
+    color: white !important; /* Texto blanco */
+    font-weight: bold; /* Negrita */
+    text-align: center; /* Centrado */
+    padding: 10px; /* Espaciado */
+    border: 1px solid #dee2e6; /* Bordes */
+}
+
+table td {
+    text-align: left; /* Texto alineado a la izquierda */
     padding: 8px;
-    border: 1px solid #dee2e6; /* Bordes de la tabla */
-}
-
-th {
-    background-color: #007bff; /* Fondo azul */
-    color: white;
-    font-weight: bold;
+    border: 1px solid #dee2e6; /* Bordes */
 }
 
 tr:nth-child(even) {
     background-color: #f2f2f2; /* Fondo alterno */
 }
 
-/* Barra de búsqueda y controles */
-.dataTables_wrapper .dataTables_filter {
-    margin-bottom: 10px; /* Espacio entre la barra de búsqueda y la tabla */
-    text-align: left; /* Alinea el cuadro de búsqueda a la izquierda */
-}
-
-.dataTables_wrapper .dataTables_filter input {
-    width: 100%; /* Haz que el cuadro ocupe todo el ancho en móviles */
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ced4da;
-    box-shadow: none;
+tr:hover {
+    background-color: #e9ecef; /* Fondo al pasar el mouse */
 }
 
 /* Botones de DataTable */
@@ -108,29 +95,46 @@ tr:nth-child(even) {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 12px;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
     background-color: #0056b3;
 }
 
-/* Ajuste general en móviles */
+/* Ajuste para el cuadro de búsqueda */
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 15px; /* Espacio entre el cuadro de búsqueda y la tabla */
+    text-align: left; /* Alineación del texto del cuadro */
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    width: 100%; /* Ajuste del ancho en pantallas pequeñas */
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px; /* Bordes redondeados */
+    outline: none;
+    font-size: 14px;
+}
+
+/* Responsividad */
 @media (max-width: 768px) {
-    th, td {
-        font-size: 12px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
-        padding: 6px;
-    }
-
-    .btn {
-        width: 100%; /* Botón de registrar ocupa todo el ancho */
-    }
-
-    .dataTables_wrapper .dataTables_filter input {
-        font-size: 14px; /* Tamaño de texto ajustado */
+    .container {
+        padding: 15px;
     }
 
     table {
-        font-size: 12px; /* Reduce el tamaño de fuente en la tabla */
+        font-size: 12px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+
+    .dataTables_wrapper .dataTables_filter {
+        margin-bottom: 20px; /* Más espacio en móviles */
+    }
+
+    .dataTables_wrapper .dataTables_filter input {
+        font-size: 14px; /* Tamaño de fuente ajustado */
     }
 }
